@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+</head>
+<body>
+    <div id="nav">
+       
+      </div>
+    <h2>This is book page</h2>
+
+</body>
+<script src="./scripts/navbar.js"> 
+  if (!loginData||login.email !=="userempher.com"){
+    alert("User not Logged in");
+    window.location.href ="/";
+
+  }
+  async function ShowAvailableBooks(){
+    const response = await fetch("/api/books?isAvaailable=true");
+    const books = await response.json();
+
+    books.forEach(book=>{
+      const bookcard = document.createElement("div");
+      bookCard.classname ="book-card";
+
+      constborrowButton = bookCard.querySelector("borrow-button");
+      borrowButton.addEventListner("click",()=>{
+        const duration = prompt("Enter borrowing duration(maximum 30 days) ")
+        if (duration && duration<=30){
+          
+        }else{
+          alert("Invalid duration")
+        }
+      });
+      bookgrid.appendChild(bookCard);
+    })
+  }
+</script>
+
+</html>

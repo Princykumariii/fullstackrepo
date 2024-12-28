@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/quiz.css">
+  </head>
+  <body>
+    <div id="nav"></div>
+    <div>
+      <form id="form">
+        <h2>Create Questions Here...</h2>
+        <input
+          id="problem"
+          type="text"
+          placeholder="Enter Problem Statement"
+        />
+        <input id="optnA" type="text" placeholder="Title" />
+        <input id="optnB" type="text" placeholder="Author" />
+        <input id="optnC" type="text" placeholder="Category" />
+        <input id="optnD" type="text" placeholder="Aviability status" />
+        <input id="optnA" type="text" placeholder="Borrowed Days" />
+        <select id="select">
+          <option value="">Select Correct Option</option>
+          <option value="a">A</option>
+          <option value="b">B</option>
+          <option value="c">C</option>
+          <option value="d">D</option>
+        </select>
+        
+          
+
+        
+        <input type="submit" value="Post request" />
+      </form>
+    </div>
+    <div id="cont"></div>
+  </body>
+  <script src="./scripts/navbar.js"></script>
+  <script src="./scripts/quiz.js" type="module"></script>
+</html>
