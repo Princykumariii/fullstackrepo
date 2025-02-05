@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logindetails</title>
+    <link rel="stylesheet" href="style/login.css">
+    <style>
+        /* #form{
+          box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        width: 30%;
+        height: 500px;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        }
+        #submit{
+            display: block;
+            margin-top: 20px;
+            width: 100%;
+            height: 42px;
+            background-color: black;
+            color: white;
+            font-size: 17px;
+            font-weight: 300;
+        }
+        #submit:hover{
+          background-color: rgb(100, 211, 100);
+        }
+        #email{
+            width: 98%;
+            height: 30px;
+          
+        }
+        #password{
+            width: 98%;
+            height: 30px;
+        }
+        #forgot{
+          width: 100%;
+          height: 30px;
+         
+          margin-top: 20px;
+          text-align: center;
+        }
+        #forgot>a{
+          text-decoration: none;
+        }
+        #create{
+          width: 100%;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          margin-top: 20px;
+          text-align: center;
+          background-color: rgb(67, 216, 67);
+          
+        }
+        #create>a{
+          text-decoration: none;
+          color: white;
+          border: green;
+        }
+        #create:hover{
+          background-color: black;
+        } */
+    </style>
+
+</head>
+<body>
+    <form >
+       <div id="form1">
+            <h4>CUSTOMER LOGIN</h4>
+            <hr></hr>
+            <p>Email Address *</p>
+            <input id="email" type="email" placeholder="Email Address">
+
+            <p>Password *</p>
+            <input id="password" type="password" placeholder="Password">
+
+            <input type ="submit" id="submit">
+            
+            <div id="forgot"><a href="forgot.html">Forgot your password</a></div>
+            <div id="create"><a href="signup2.html">CREATE MY ACOOUNT</a></div>
+            <!-- <input type="submit" id="submit"> -->
+          </div>
+        
+    </form>
+</body>
+</html>
+<script>
+     document.querySelector("form").addEventListener("submit", loginFun);
+  function loginFun(){
+    event.preventDefault()
+    var arr=[]
+    var enteredemail=document.querySelector("#email").value;
+    var enteredpass=document.querySelector("#password").value;
+    // console.log(enteredemail,enteredpass)
+  
+    var regdUsers = JSON.parse(localStorage.getItem("userCreds"))||[]
+  
+  
+
+    // console.log(regdUsers)
+    var count=0
+{for(var i=0;i<regdUsers.length;i++)
+     {
+        if(regdUsers[i].email==enteredemail&&regdUsers[i].password==enteredpass)
+        {
+          console.log("yes")
+          alert("successfully login")
+          enteredemail=""
+          enteredpass=""
+          count++
+          
+          window.location.href="index.html"
+          break
+        }
+
+      }
+     if(count==0)
+     {console.log("No")
+     count=0
+    alert("Invalid Loginid")} 
+    }
+
+      
+
+      
+     
+      
+
+     } 
+</script>
